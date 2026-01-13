@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { adminNavItems } from "@/lib";
 import { usePathname } from "next/navigation";
 import { signOut } from "next-auth/react";
+import Image from "next/image";
 
 const AdminNavbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -59,12 +60,19 @@ const AdminNavbar = () => {
       <div className="mx-auto w-full max-w-7xl px-6 h-full">
         <div className="flex h-full items-center justify-between">
           {/* Logo Section */}
-          <div className="flex lg:w-[225px]">
+          <div className="flex items-center justify-center gap-px lg:w-56.25">
             <Link
               href="/"
               aria-label="PipVersee"
-              className="transition-opacity hover:opacity-80 focus-visible:ring-2 rounded-4xl text-white border border-gray-800 px-4 py-1 backdrop-blur-[25px] font-medium focus-visible:ring-white/20 font-sans"
+              className="transition-opacity flex justify-center items-center hover:opacity-80 focus-visible:ring-2 rounded-4xl text-white font-medium focus-visible:ring-white/20 font-sans"
             >
+              <Image
+                src={'/pipverse-logo.PNG'}
+                alt="logo"
+                width={32}
+                height={32}
+                className="w-8 h-8"
+              />
               PipVerse
             </Link>
           </div>
@@ -78,7 +86,7 @@ const AdminNavbar = () => {
                   <li key={item.label}>
                     <Link href={item.href || "#"} className={isActive ? 'text-foreground' : ""}>
                       <button
-                        className={`group flex items-center gap-0.5 px-3 py-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors outline-none focus-visible:ring-2 focus-visible:ring-white/10 rounded-lg h-[58px]`}
+                        className={`group flex items-center gap-0.5 px-3 py-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors outline-none focus-visible:ring-2 focus-visible:ring-white/10 rounded-lg h-14.5`}
                       >
                         {item.label}
                       </button>
@@ -91,24 +99,24 @@ const AdminNavbar = () => {
 
           {/* CTA Buttons */}
           <div className="flex items-center gap-4">
-              <button onClick={logoutHandler} className={cn(
-                "relative inline-flex items-center justify-center h-10 px-4 text-sm font-semibold text-white",
-                "rounded-2xl border-2 border-white/5 backdrop-blur-[25px]",
-                "bg-origin-border bg-[linear-gradient(104deg,rgba(253,253,253,0.05)_5%,rgba(240,240,228,0.1)_100%)]",
-                "shadow-sm transition-all duration-200 whitespace-nowrap overflow-hidden",
-                "hover:bg-white/90 hover:text-black hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]",
-                "focus-visible:ring-4 focus-visible:ring-white/30 outline-none"
-              )}>
-                <span className="relative z-10">Logout</span>
-              </button>
-              <div
-                className="absolute inset-0 opacity-40 pointer-events-none mix-blend-overlay group-hover:opacity-60 transition-opacity"
-                style={{
-                  backgroundImage: "url('https://resend.com/static/texture-btn.png')",
-                  backgroundRepeat: 'repeat',
-                  backgroundSize: 'auto'
-                }}
-              />
+            <button onClick={logoutHandler} className={cn(
+              "relative inline-flex items-center justify-center h-10 px-4 text-sm font-semibold text-white",
+              "rounded-2xl border-2 border-white/5 backdrop-blur-[25px]",
+              "bg-origin-border bg-[linear-gradient(104deg,rgba(253,253,253,0.05)_5%,rgba(240,240,228,0.1)_100%)]",
+              "shadow-sm transition-all duration-200 whitespace-nowrap overflow-hidden",
+              "hover:bg-white/90 hover:text-black hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]",
+              "focus-visible:ring-4 focus-visible:ring-white/30 outline-none"
+            )}>
+              <span className="relative z-10">Logout</span>
+            </button>
+            <div
+              className="absolute inset-0 opacity-40 pointer-events-none mix-blend-overlay group-hover:opacity-60 transition-opacity"
+              style={{
+                backgroundImage: "url('https://resend.com/static/texture-btn.png')",
+                backgroundRepeat: 'repeat',
+                backgroundSize: 'auto'
+              }}
+            />
 
             {/* Mobile Menu Toggle */}
             <button
@@ -124,7 +132,7 @@ const AdminNavbar = () => {
 
       {/* Mobile Menu Overlay */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 top-[58px] z-40 bg-black md:hidden animate-in fade-in slide-in-from-top-4 duration-300">
+        <div className="fixed inset-0 top-14.5 z-40 bg-black md:hidden animate-in fade-in slide-in-from-top-4 duration-300">
           <nav className="flex flex-col p-6 gap-2">
             {adminNavItems.map((item) => (
               <Link
