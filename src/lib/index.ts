@@ -66,7 +66,7 @@ export const navItems = [
   { label: "Lessons", href: '/lessons' },
   { label: "Stock Updates", href: '/stock-updates' },
   { label: "Articles", href: '/articles' },
-  { label: "Stocks News", href: '/news' },
+  // { label: "Stocks News", href: '/news' },
   { label: "Academy", href: '/academy' },
 ];
 
