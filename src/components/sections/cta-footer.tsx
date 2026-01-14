@@ -1,16 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Button } from '../ui/button';
+import { Instagram, Mail, TrendingUp, Youtube } from 'lucide-react';
 
 const CTAFooter = () => {
-  const footerLinks = {
-    Documentation: ['Getting Started', 'API Reference', 'Integrations', 'Examples', 'SDKs'],
-    Resources: ['Changelog', 'Pricing', 'Security', 'SOC 2', 'GDPR', 'Brand', 'Wallpapers'],
-    Company: ['About', 'Blog', 'Careers', 'Customers', 'Events', 'Humans', 'Philosophy'],
-    Help: ['Contact', 'Support', 'Status', 'Migrate', 'Knowledge Base', 'Legal Policies'],
-    Handbook: ['Why we exist', 'How we work', 'Engineering', 'Design', 'Success', 'Marketing'],
-  };
-
+  const year = new Date().getFullYear()
   const socialIcons = [
     { name: 'X', src: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a16ead1d-2f55-4181-be1b-e4556d770843-resend-com/assets/svgs/footer-x-2.svg' },
     { name: 'GitHub', src: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a16ead1d-2f55-4181-be1b-e4556d770843-resend-com/assets/svgs/footer-github-3.svg' },
@@ -19,11 +14,11 @@ const CTAFooter = () => {
   ];
 
   return (
-    <footer className="w-full bg-black text-white pt-32 pb-16 overflow-hidden">
+    <footer className="w-full bg-black text-white pt-32 pb-0 overflow-hidden">
       {/* Final CTA Section */}
       <section className="container mx-auto px-6 mb-32 flex flex-col items-center text-center">
         <h2 className="font-serif text-[2.5rem] md:text-[5.5rem] tracking-tight leading-[1] mb-10 max-w-4xl text-white">
-          Trading 
+          Trading
           <span className='bg-linear-to-r from-green-400 to-green-600 bg-clip-text text-transparent italic z-10'>
             &nbsp;simplified.
           </span>
@@ -32,7 +27,7 @@ const CTAFooter = () => {
             &nbsp;Join
           </span> right now.
         </h2>
-        
+
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
           <Link
             href="/trades"
@@ -46,7 +41,7 @@ const CTAFooter = () => {
             </span>
             <div className="absolute inset-0 -z-10 rounded-2xl bg-[url('https://resend.com/static/texture-btn.png')] opacity-20 group-hover:opacity-0 transition-opacity"></div>
           </Link>
-          
+
           <Link
             href="#socials"
             className="group inline-flex items-center gap-2 text-[1.125rem] font-semibold text-[#888888] transition-colors hover:text-white"
@@ -60,63 +55,118 @@ const CTAFooter = () => {
       </section>
 
       {/* Main Footer Sitemap */}
-      <div className="container mx-auto px-6 border-t border-white/10 pt-16">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-8 gap-y-12">
-          {/* Brand/Address Column */}
-          <div className="col-span-2 lg:col-span-1">
-            <a href="/home" className="inline-block mb-6 transition-opacity hover:opacity-80">
-              <svg width="80" height="24" viewBox="0 0 256 68" fill="white">
-                <path d="M42.2 46.1c0 10-6.1 16-16.1 16h-9.9V62h12.4c7.6 0 13.1-4.7 13.1-13.3 0-6.7-3.2-11.2-8.3-13.1 4.5-2.2 7-6.5 7-11.1 0-7.8-5.3-12.7-12.6-12.7h-12.3v30.4H28.4V11.2h9.9c7.6 0 12.1 4.4 12.1 12.3 0 5-2.5 9-6.9 11l-.8.4.8.3c6.1 2.3 8.7 6.1 8.7 10.9zm-13.8 1.4V34.2h9.9c4 0 6.6 2.1 6.6 6.8 0 4.2-2.3 6.5-6.6 6.5h-9.9zm0-23.7V11.2h9.9c4 0 6.6 2.1 6.6 6.8 0 4.2-2.3 6.5-6.6 6.5h-9.9z" fill="white"></path>
-              </svg>
-            </a>
-            <p className="text-[13px] leading-relaxed text-[#888888] mb-8 font-sans">
-              2261 Market Street #5039<br />
-              Islamabad, Pakistan
-            </p>
-            
-            <div className="flex gap-4 mb-8">
-              {socialIcons.map((social) => (
-                <a key={social.name} href={`#${social.name.toLowerCase()}`} className="opacity-60 transition-opacity hover:opacity-100">
-                  <Image src={social.src} alt={social.name} width={20} height={20} />
-                </a>
-              ))}
+      {/* <footer className="bg-black text-white"> */}
+        <div className="container mx-auto px-4 pt-16">
+          <div className="grid md:grid-cols-4 gap-8">
+            {/* Brand & Description */}
+            <div className="md:col-span-2 space-y-4">
+              <div className="flex items-center space-x-2">
+                <div className="w-10 h-10 bg-gradient-golden rounded-xl flex items-center justify-center">
+                  <Image
+                    src={'/pipverse-logo.PNG'}
+                    alt="logo"
+                    width={32}
+                    height={32}
+                    className="w-8 h-8"
+                  />
+                </div>
+                <span className="text-2xl font-serif tracking-tighter">PipVerse</span>
+              </div>
+              <p className="text-muted-foreground font-sans leading-relaxed max-w-md">
+                Real trades. Real outcomes. Zero hype. PipVerse documents the journey to disciplined, consistent trading.
+              </p>
+              <div className="flex space-x-4">
+                <Button variant="default" size="icon" className="hover:bg-gray-200">
+                  <a href="#" target="_blank">
+                    <img src='/x-logo-black.svg' className="w-4 h-4" />
+                  </a>
+                </Button>
+                <Button variant="default" size="icon" className="hover:bg-gray-200">
+                  <a href="#" target="_blank">
+                    <Youtube className="w-4 h-4" />
+                  </a>
+                </Button>
+                <Button variant="default" size="icon" className="hover:bg-gray-200">
+                  <a href="#" target="_blank">
+                    <Instagram className="w-4 h-4" />
+                  </a>
+                </Button>
+              </div>
             </div>
 
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.05] px-3 py-1 text-xs font-medium text-[#888888]">
-              <div className="h-1.5 w-1.5 rounded-full bg-[#10b981]"></div>
-              Almost all trades profitable
-            </div>
-          </div>
-
-          {/* Sitemap Columns */}
-          {Object.entries(footerLinks).map(([title, links]) => (
-            <div key={title} className="flex flex-col">
-              <h4 className="text-[14px] font-semibold text-white mb-6 font-sans">{title}</h4>
-              <ul className="flex flex-col gap-4">
-                {links.map((link) => (
-                  <li key={link}>
-                    <a href={`#${link.toLowerCase().replace(/\s+/g, '-')}`} className="text-[13px] text-[#888888] transition-colors hover:text-white font-sans">
-                      {link}
-                    </a>
-                  </li>
-                ))}
+            {/* Quick Links */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-serif text-white tracking-tighter">Quick Links</h3>
+              <ul className="space-y-2 font-sans">
+                <li>
+                  <a href="#home" className="text-muted-foreground hover:text-white transition-all duration-150">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="#socials" className="text-muted-foreground hover:text-white transition-all duration-150">
+                    Socials
+                  </a>
+                </li>
+                <li>
+                  <Link href="/trades" className="text-muted-foreground hover:text-white transition-all duration-150">
+                    Trade Ideas
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/lessons" className="text-muted-foreground hover:text-white transition-all duration-150">
+                    Lessons
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/articles" className="text-muted-foreground hover:text-white transition-all duration-150">
+                    Articles
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/stock-updates" className="text-muted-foreground hover:text-white transition-all duration-150">
+                    Stock Updates
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/academy" className="text-muted-foreground hover:text-white transition-all duration-150">
+                    Academy
+                  </Link>
+                </li>
               </ul>
             </div>
-          ))}
-        </div>
 
-        {/* Footer Bottom Line */}
-        <div className="mt-20 flex flex-col items-center justify-between border-t border-white/10 pt-8 sm:flex-row">
-          <p className="text-[13px] text-[#333333] font-sans">
-            © {new Date().getFullYear()} PipVerse. Built by alphas.
-          </p>
-          <div className="flex items-center gap-6 mt-4 sm:mt-0 opacity-40 grayscale group hover:opacity-100 hover:grayscale-0 transition-all">
-            <Image src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a16ead1d-2f55-4181-be1b-e4556d770843-resend-com/assets/svgs/footer-github-3.svg" alt="Y Combinator" width={18} height={18} />
-            <span className="text-[11px] font-bold tracking-widest uppercase text-[#888888]">Backed by FinTech Companies</span>
+            {/* Newsletter */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-serif tracking-tighter text-white">Stay Updated</h3>
+              <p className="text-muted-foreground font-sans text-sm">
+                Get notified when I post new trades and market insights.
+              </p>
+              <div className="space-y-2">
+                <a href="#">
+                  <Button variant="default" size="sm" className="w-full">
+                    <Mail className="w-4 h-4 mr-2" />
+                    Join Our Community
+                  </Button>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Section */}
+          <div className="border-t border-primary-foreground/20 mt-12 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 mb-3 md:space-y-0">
+              <p className="text-muted-foreground font-clean text-sm">
+                ©{year} PipVerse. All rights reserved. Not financial advice.
+              </p>
+              <div className="flex items-center space-x-1 text-muted-foreground font-clean text-sm">
+                <span>Made by alphas</span>
+                <span>for the trading community</span>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
   );
 };
 

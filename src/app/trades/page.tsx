@@ -47,7 +47,8 @@ const Trades = () => {
               Our <span className='bg-linear-to-r from-green-400 to-green-600 bg-clip-text text-transparent z-10'>Active Trades</span>
             </h2>
             <p className="text-[18px] text-center md:text-start text-muted-foreground font-clean max-w-2xl">
-              Every trade tells a story. Here's the list of all the trades that we are currently in.
+              Every trade tells a story. Here's the list of all the trades that we are currently in. <br />
+              *Only one trade will be shared here everyday. For more trades, <a href='#' target='_blank' className='underline text-green-600 transition-all duration-150 hover:text-green-700'>join our community</a>*
             </p>
           </div>
 
