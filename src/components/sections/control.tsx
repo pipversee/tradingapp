@@ -36,8 +36,7 @@ const ControlSection = () => {
           Everything in your control
         </h2>
         <p className="text-gray-400 text-lg md:text-[1.125rem] leading-relaxed">
-          All the features you need to manage your email sending, troubleshoot
-          with detailed logs, and protect your domain reputation – without the friction.
+          Get transparent trade ideas, real-time market context, and clear execution guidance — all in one place. PipVerse makes trading simple, reliable, and completely free.
         </p>
       </div>
 

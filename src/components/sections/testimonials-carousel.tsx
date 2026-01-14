@@ -3,12 +3,6 @@
 import React from 'react';
 import Image from 'next/image';
 
-/**
- * TestimonialCarousel component that clones the "Beyond expectations" section.
- * Features a heading, subheading, and a horizontal scrolling list of testimonial cards.
- * Adheres to the dark theme and pixel-perfect design requirements.
- */
-
 interface Testimonial {
   quote: string;
   author: string;
@@ -19,41 +13,42 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    quote: "It was so easy to switch that our important emails end. Everyone should be using it.",
-    author: "Zeno Rocha",
-    role: "Founder of Resend", // Placeholder for actual role in screenshot
+    quote: "PipVerse keeps trading simple and transparent. The trade ideas are clear, and knowing exactly how they operate builds real trust.",
+    author: "Ahsan Ali",
+    role: "Active Stock Trader",
     avatar: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a16ead1d-2f55-4181-be1b-e4556d770843-resend-com/assets/images/images_26.png",
     logo: "/static/logos/logo-1.png",
   },
   {
-    quote: "All of our customers are located in South America, so having a solution that could send emails from the region closest to our users is very important. Resend's multi-region feature is a game-changer for us.",
-    author: "Giovanni Keppelen",
-    role: "CTO & Partner at VOA Hotels",
+    quote: "What I like most is that PipVerse is completely free. They share real trade ideas and connect you directly to brokers without selling courses or tools.",
+    author: "Hamza Khan",
+    role: "Retail Trader",
     avatar: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a16ead1d-2f55-4181-be1b-e4556d770843-resend-com/assets/images/images_27.png",
     logo: "/static/logos/logo-2.png",
   },
   {
-    quote: "The speed and ease of integrating with the product was incredible, but what really stood out was their intricate knowledge of email and relentless support day or night. Oh and we also ended up winning Product of the week.",
-    author: "Sam Ducker",
-    role: "Co-founder of Anyone",
+    quote: "Most platforms hide losses. PipVerse doesn’t. Seeing both winning and losing trades helped me understand how real trading actually works.",
+    author: "Bilal Ahmed",
+    role: "Beginner Stock Trader",
     avatar: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a16ead1d-2f55-4181-be1b-e4556d770843-resend-com/assets/images/images_28.png",
     logo: "/static/logos/logo-3.png",
   },
   {
-    quote: "As a developer I love the approach that the Resend team is taking. Its so refreshing. They are also extremely user-centric and helpful in terms of getting you up and running, sending beautiful emails that deliver.",
-    author: "Hahnbee Lee",
-    role: "Co-founder at Mintlify",
+    quote: "PipVerse feels trader-first. No subscriptions, no pressure, just trade ideas and the freedom to execute with a broker of choice.",
+    author: "Usman Raza",
+    role: "Independent Trader",
     avatar: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a16ead1d-2f55-4181-be1b-e4556d770843-resend-com/assets/images/images_26.png",
     logo: "/static/logos/logo-4.png",
   },
   {
-    quote: "The Resend team have built a product that hasn't seen 10x innovation in years. All my peers are raving about Resend and the experience.",
-    author: "Roberto Ricci",
-    role: "Head of Product",
+    quote: "The transparency is what stands out. PipVerse shows the process, the discipline, and the reality of trading — not just the highlights.",
+    author: "Saad Malik",
+    role: "Long-term Market Participant",
     avatar: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a16ead1d-2f55-4181-be1b-e4556d770843-resend-com/assets/images/images_27.png",
     logo: "/static/logos/logo-5.png",
   }
 ];
+
 
 const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
   return (
@@ -116,7 +111,8 @@ export default function TestimonialsCarousel() {
         </div>
       </div>
 
-      <style dangerouslySetInnerHTML={{ __html: `
+      <style dangerouslySetInnerHTML={{
+        __html: `
         @keyframes marquee {
           0% { transform: translateX(0); }
           100% { transform: translateX(calc(-400px * 5 - 1rem * 5)); }

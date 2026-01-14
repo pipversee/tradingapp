@@ -1,31 +1,32 @@
-import { ChevronDown, TrendingUp, Bell, Shield, Zap, Users, BarChart3, DollarSign, Award, Target, TrendingDown } from "lucide-react";
+import { TrendingUp, Bell, Shield, Zap, Users, BarChart3, DollarSign, Award, Target, TrendingDown } from "lucide-react";
 
 export const faqs = [
   {
-    question: "How do I receive stock signals?",
-    answer: "Once you subscribe, you'll receive real-time stock signals directly to your dashboard, email, and mobile app. Our signals include entry points, target prices, and stop-loss levels for each recommendation."
+    question: "How do I receive trade ideas from PipVerse?",
+    answer: "PipVerse shares trade ideas openly through our platform and community channels. There is no subscription or payment required — you can access trade setups, execution levels, and context completely free."
   },
   {
-    question: "What is the accuracy rate of your signals?",
-    answer: "Our signals maintain a historical accuracy rate of over 75%. We use advanced technical analysis, market sentiment data, and AI-powered algorithms to identify high-probability trading opportunities."
+    question: "Is PipVerse really free?",
+    answer: "Yes. PipVerse is 100% free for traders. We earn a fixed commission from our partner brokers when traders choose to trade through them. You never pay PipVerse anything."
   },
   {
-    question: "Can I cancel my subscription anytime?",
-    answer: "Yes, you can cancel your subscription at any time without any penalties. Your access will continue until the end of your current billing period."
+    question: "Do you guarantee profits or accuracy?",
+    answer: "No. PipVerse does not guarantee profits or claim fixed accuracy rates. Trading involves risk, and losses are part of the process. We focus on sharing disciplined trade ideas and transparent outcomes."
   },
   {
-    question: "Do you provide support for beginners?",
-    answer: "Absolutely. We offer comprehensive educational resources, video tutorials, and a dedicated support team to help beginners understand our signals and develop their trading skills."
+    question: "Is PipVerse suitable for beginners?",
+    answer: "Yes. PipVerse is designed to be beginner-friendly while remaining useful for experienced traders. We explain trade ideas clearly and provide educational content to help traders understand the reasoning behind setups."
   },
   {
-    question: "What markets do you cover?",
-    answer: "We cover major stock exchanges including NYSE, NASDAQ, and BSE/NSE. Our signals span across large-cap, mid-cap, and select small-cap stocks across various sectors."
+    question: "What markets does PipVerse focus on?",
+    answer: "PipVerse primarily focuses on stock markets, sharing trade ideas based on price action, market structure, and risk management principles."
   },
   {
-    question: "How often do you send signals?",
-    answer: "We send signals based on market conditions, typically 3-5 signals per week. Quality over quantity is our priority—we only send signals when we identify high-conviction opportunities."
+    question: "How often are trade ideas shared?",
+    answer: "Trade ideas are shared based on market conditions, not on a fixed schedule. PipVerse prioritizes quality and clarity over frequency, focusing only on meaningful market opportunities."
   }
 ];
+
 
 export const whyChooseUs = [
   {
