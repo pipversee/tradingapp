@@ -70,7 +70,7 @@ const CTAFooter = () => {
                     className="w-8 h-8"
                   />
                 </div>
-                <span className="text-2xl font-serif tracking-tighter">PipVerse</span>
+                <span className="text-2xl font-serif tracking-tight">PipVerse</span>
               </div>
               <p className="text-muted-foreground font-sans leading-relaxed max-w-md">
                 Real trades. Real outcomes. Zero hype. PipVerse documents the journey to disciplined, consistent trading.
@@ -96,7 +96,7 @@ const CTAFooter = () => {
 
             {/* Quick Links */}
             <div className="space-y-4">
-              <h3 className="text-lg font-serif text-white tracking-tighter">Quick Links</h3>
+              <h3 className="text-lg font-serif text-white tracking-tight">Quick Links</h3>
               <ul className="space-y-2 font-sans">
                 <li>
                   <a href="#home" className="text-muted-foreground hover:text-white transition-all duration-150">
@@ -138,7 +138,7 @@ const CTAFooter = () => {
 
             {/* Newsletter */}
             <div className="space-y-4">
-              <h3 className="text-lg font-serif tracking-tighter text-white">Stay Updated</h3>
+              <h3 className="text-lg font-serif tracking-tight text-white">Stay Updated</h3>
               <p className="text-muted-foreground font-sans text-sm">
                 Get notified when I post new trades and market insights.
               </p>
