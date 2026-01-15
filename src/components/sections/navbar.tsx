@@ -129,7 +129,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Overlay */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 top-[58px] z-40 bg-black md:hidden animate-in fade-in slide-in-from-top-4 duration-300">
+        <div className="fixed inset-0 top-14.5 z-40 bg-black md:hidden animate-in fade-in slide-in-from-top-4 duration-300">
           <nav className="flex flex-col p-6 gap-2">
             {navItems.map((item) => (
               <Link

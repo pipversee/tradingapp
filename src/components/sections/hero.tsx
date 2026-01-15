@@ -20,7 +20,7 @@ const HeroSection = () => {
         />
       </div>
 
-      <section id='home' className="mx-auto max-w-5xl px-6 py-18 md:h-full md:max-h-237.5 md:max-w-7xl relative z-30">
+      <section id='home' className="mx-auto max-w-5xl px-6 pb-18 md:h-full md:max-h-237.5 md:max-w-7xl relative z-30">
         <div className="flex h-full flex-col items-center justify-between md:flex-row md:pb-12">
           {/* Text Content */}
           <div className="origin-center-left order-2 max-w-150 animate-in fade-in slide-in-from-bottom-8 duration-1000 ease-out sm:shrink-0 md:order-1 lg:pl-16">

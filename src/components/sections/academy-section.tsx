@@ -72,7 +72,7 @@ const AcademySection = () => {
               </div>
             </MagicCard>
 
-            <div className="glass-card rounded-3xl p-8 md:p-2 lg:p-4">
+            <div className="glass-card rounded-3xl px-0 py-4 lg:py-6">
               <div className="space-y-8">
                 <div
                   className="space-y-6 text-base md:text-lg text-muted-foreground leading-relaxed"
@@ -138,11 +138,17 @@ const AcademySection = () => {
               </div>
             </MagicCard>
 
-            <div className="glass-card rounded-3xl p-8 md:p-2 lg:p-4">
+            <div className="glass-card rounded-3xl px-0 py-4 md:py-6">
               <div className="space-y-8">
                 <div
                   className="space-y-6 text-base md:text-lg text-muted-foreground leading-relaxed"
                 >
+                  <p>*For complete in detailed video, &nbsp;
+                    <a href="#" target='_blank' className='underline text-green-600 transition-all duration-150 hover:text-green-700'>
+                      watch on youtube
+                    </a>
+                  *
+                  </p>
                   <p>
                     Our stocks-focused program is designed to take you from market basics to confident execution.
                     You’ll master core concepts like <span className="text-foreground">Stock Market Fundamentals</span>,{' '}

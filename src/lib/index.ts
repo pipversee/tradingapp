@@ -1,4 +1,4 @@
-import { TrendingUp, Bell, Shield, Zap, Users, BarChart3, DollarSign, Award, Target, TrendingDown } from "lucide-react";
+import { TrendingUp, Bell, Shield, Zap, Users, BarChart3, DollarSign, Award, Target, TrendingDown, Lightbulb, LineChart, LucideIcon } from "lucide-react";
 
 export const faqs = [
   {
@@ -68,6 +68,7 @@ export const navItems = [
   { label: "Articles", href: '/articles' },
   // { label: "Stocks News", href: '/news' },
   { label: "Academy", href: '/academy' },
+  { label: "Our Journey", href: '/our-journey' },
 ];
 
 export const adminNavItems = [
@@ -152,14 +153,72 @@ export const milestones = [
   }
 ];
 
+interface JourneyStep {
+  id: number;
+  title: string;
+  description: string;
+  Icon: LucideIcon;
+}
+
+export const journeySteps: JourneyStep[] = [
+  {
+    id: 1,
+    title: "Idea & Vision",
+    description: "PipVerse started with a clear vision — to document and share a real trading journey with complete transparency. Instead of selling dreams, tools, or shortcuts, the focus is on showing how disciplined trading actually works, including the thinking, planning, and patience required behind every trade.",
+    Icon: Lightbulb
+  },
+  {
+    id: 2,
+    title: "Laying the Foundation",
+    description: "Before sharing anything publicly, PipVerse focused on building a strong foundation rooted in risk management, market structure, and process-driven decision making. The goal was simple: trade with rules, not emotions, and create a repeatable framework that could be followed consistently.",
+    Icon: LineChart
+  },
+  {
+    id: 3,
+    title: "Sharing Trades Publicly",
+    description: "Trade ideas are shared openly with proper context, clear reasoning, and defined execution levels. PipVerse documents the plan before the trade and follows through with outcomes afterward, allowing traders to see how real setups behave in live market conditions.",
+    Icon: LineChart
+  },
+  {
+    id: 4,
+    title: "Facing Real Losses",
+    description: "Not every trade works, and PipVerse does not hide that reality. Losing trades are shared and reviewed honestly to highlight mistakes, market uncertainty, and the importance of following risk limits. These moments form the most valuable learning experiences.",
+    Icon: TrendingDown
+  },
+  {
+    id: 5,
+    title: "Reviewing & Refining",
+    description: "Each trade outcome feeds back into the process. PipVerse emphasizes reviewing entries, exits, and risk decisions to continuously refine strategy and improve discipline rather than chasing short-term results.",
+    Icon: Target
+  },
+  {
+    id: 6,
+    title: "Building Discipline",
+    description: "The journey shifts from individual wins to long-term consistency. PipVerse prioritizes patience, controlled risk, and emotional stability, reinforcing the idea that sustainable trading success comes from process, not prediction.",
+    Icon: Target
+  },
+  {
+    id: 7,
+    title: "Educating Along the Way",
+    description: "As the journey progresses, PipVerse shares insights, breakdowns, and explanations to help traders understand not just what was traded, but why. Education becomes a natural extension of transparency, helping traders develop their own independent thinking.",
+    Icon: Lightbulb
+  },
+  {
+    id: 8,
+    title: "Growing With Community",
+    description: "PipVerse grows alongside a community of traders who value honesty over hype. The platform remains completely free, fostering an environment where traders learn together, share perspectives, and improve through collective experience.",
+    Icon: Users
+  }
+];
+
 export const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'start': return 'bg-blue-100 text-blue-600 border-blue-200';
-      case 'education': return 'bg-purple-100 text-purple-600 border-purple-200';
-      case 'milestone': return 'bg-green-100 text-green-600 border-green-200';
-      case 'achievement': return 'bg-golden/20 text-golden border-golden/30';
-      case 'success': return 'bg-emerald-100 text-emerald-600 border-emerald-200';
-      case 'current': return 'bg-primary/10 text-primary border-primary/20';
-      default: return 'bg-gray-100 text-gray-600 border-gray-200';
-    }
+  switch (type) {
+    case 'start': return 'bg-blue-100 text-blue-600 border-blue-200';
+    case 'education': return 'bg-purple-100 text-purple-600 border-purple-200';
+    case 'milestone': return 'bg-green-100 text-green-600 border-green-200';
+    case 'achievement': return 'bg-golden/20 text-golden border-golden/30';
+    case 'success': return 'bg-emerald-100 text-emerald-600 border-emerald-200';
+    case 'current': return 'bg-primary/10 text-primary border-primary/20';
+    default: return 'bg-gray-100 text-gray-600 border-gray-200';
+  }
 };

@@ -76,7 +76,7 @@ export function MagicCard({
       onPointerEnter={reset}
     >
       <motion.div
-        className="bg-border pointer-events-none absolute inset-0 rounded-2xl duration-300 group-hover:opacity-100"
+        className="bg-border border-white/24 pointer-events-none absolute inset-0 rounded-2xl duration-300 group-hover:opacity-100"
         style={{
           background: useMotionTemplate`
           radial-gradient(${gradientSize}px circle at ${mouseX}px ${mouseY}px,
