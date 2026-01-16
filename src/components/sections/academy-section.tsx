@@ -144,7 +144,7 @@ const AcademySection = () => {
                   className="space-y-6 text-base md:text-lg text-muted-foreground leading-relaxed"
                 >
                   <p>*For complete in detailed video, &nbsp;
-                    <a href="#" target='_blank' className='underline text-green-600 transition-all duration-150 hover:text-green-700'>
+                    <a href="https://youtube.com/@pipversee?si=vsFJId8voa1-tsu8" target='_blank' className='underline text-green-600 transition-all duration-150 hover:text-green-700'>
                       watch on youtube
                     </a>
                   *

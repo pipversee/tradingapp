@@ -10,7 +10,7 @@ import { whyChooseUs } from '@/lib';
 export default function WhyChooseUs() {
 
   return (
-    <section className="mx-auto px-6 py-12 pt-68 sm:py-24 max-w-5xl md:max-w-7xl">
+    <section className="mx-auto px-6 py-16 pb-24 pt-48 sm:py-24 max-w-5xl md:max-w-7xl">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

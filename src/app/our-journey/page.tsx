@@ -128,7 +128,6 @@ const Journey = () => {
                           gradientColor={"#262626"}
                           className="p-0"
                         >
-
                           <div className="rounded-2xl bg-neutral-900/50 p-5 transition-all duration-300 hover:bg-neutral-900/80">
                             <div className="mb-3 flex items-center gap-3">
                               <span className="text-[10px] font-semibold uppercase tracking-widest text-neutral-600">

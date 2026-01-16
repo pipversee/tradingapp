@@ -2,11 +2,10 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { navItems } from "@/lib";
 import { usePathname } from "next/navigation";
-import { PulsatingButton } from "../ui/pulsating-button";
 import Image from "next/image";
 
 const Navbar = () => {
@@ -93,8 +92,9 @@ const Navbar = () => {
 
           {/* CTA Buttons */}
           <div className="flex items-center gap-4">
-            <Link
-              href="#socials"
+            <a
+              href="https://t.me/ruyi008899"
+              target="_blank"
               className={cn(
                 "relative inline-flex items-center justify-center h-10 px-4 text-sm font-semibold text-white",
                 "rounded-2xl border-2 border-white/5 backdrop-blur-[25px]",
@@ -113,7 +113,7 @@ const Navbar = () => {
                 }}
               />
               <span className="relative z-10">Start Earning</span>
-            </Link>
+            </a>
 
             {/* Mobile Menu Toggle */}
             <button
@@ -141,15 +141,6 @@ const Navbar = () => {
                 {item.label}
               </Link>
             ))}
-            {/* <div className="mt-8 flex flex-col gap-4">
-              <Link
-                href="/login"
-                className="w-full h-12 flex items-center justify-center rounded-2xl text-foreground font-semibold bg-white/5 border border-white/10"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Log In
-              </Link>
-            </div> */}
           </nav>
         </div>
       )}

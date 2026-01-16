@@ -11,25 +11,6 @@ import {
 const ControlSection = () => {
   return (
     <section className="relative mx-auto max-w-7xl px-6 py-24 md:py-40 flex flex-col items-center overflow-hidden">
-      {/* 3D Globe Animation Wrapper */}
-      <div className="relative mb-12 flex justify-center">
-        <div className="relative w-[140px] h-[140px] md:w-[170px] md:h-[170px]">
-          {/* Using the provided high-fidelity video asset */}
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-contain"
-          >
-            <source
-              src="https://resend.com/static/landing-page/3d-control.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </div>
-      </div>
-
       {/* Heading Group */}
       <div className="text-center max-w-3xl mb-16">
         <h2 className="font-serif text-[3rem] md:text-[3.5rem] tracking-tight leading-[110%] text-white mb-4">
