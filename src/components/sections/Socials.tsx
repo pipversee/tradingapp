@@ -70,7 +70,7 @@ const Socials = () => {
     {
       name: "LinkedIn",
       description: "Connect with our professional team and view company updates.",
-      href: "#",
+      href: "https://www.linkedin.com/in/pip-verse-02a8623a6",
       icon: (
         <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
           <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
@@ -99,6 +99,17 @@ const Socials = () => {
         </svg>
       ),
       join: 'Join Community'
+    },
+    {
+      name: "Tiktok",
+      description: "Short-form, high-impact trading insights, market breakdowns — all shared openly.",
+      href: "https://www.tiktok.com/@pipversee?_r=1&_t=ZS-938r2R48V7p",
+      icon: (
+        <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
+          <path d="M21 7.5a6.8 6.8 0 0 1-4.1-1.3v7.3a6.5 6.5 0 1 1-6.5-6.5c.4 0 .8 0 1.2.1v3.3a3.2 3.2 0 1 0 2.1 3V1h3.3a6.8 6.8 0 0 0 4 3.5v3z" />
+        </svg >
+      ),
+      join: 'Follow Us'
     }
   ];
 
